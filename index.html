@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kawethra</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</head>
+
+<body class="antialiased bg-gray-200 text-gray-900 font-sans p-6 dark:bg-gray-900">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+  <script src="script.js"></script>
+  <script>
+    var Author = "Kawehtra";
+    var Description = `
+    6 Yıldır Bu Sektöre hizmet vermekteyim.
+    Çoğunlukla Kullandığım Programlama dilleri : JavaScript, Golang, C, C++, Rust ve Nim.
+    Web de Kullandığım teknolojiler çoğunlukla : Back-end'de Kacaw, KawethraDB, Go-cache, sql-driver,...
+    Front-end'de : Kawehtra.js, tailwindcss, bootstrap, kawethra.css,..
+    `
+    var Projeler = [
+      Proje("Power Portfolyo Sitesi", "Kendi başıma Powershell için geliştirmiş olduğum HTTP Framework Power , Kawethra.js ve Tailwind ile yapmış olduğum Websitesi", "https://github.com/Hasan-Kilici/Power-kawethra.js-Portfolio-website", "https://user-images.githubusercontent.com/105741983/242738996-d87db125-b065-4591-a4fd-cec15719353e.png", "Back-end"),
+      Proje("Golang Kacaw", "Kendi başıma Golang için geliştirmiş olduğum HTTP Framework", "https://github.com/Hasan-Kilici/kacaw", "https://pbs.twimg.com/profile_images/1142154201444823041/O6AczwfV_400x400.png", "Back-end"),
+      Proje("Çoklu PDF yazdırıcısı", "Powershell ve GhostScript ile geliştirmiş olduğum Çoklu PDF yazdırma Programı.", "https://github.com/Hasan-Kilici/powershell-multiple-printer-app", "https://user-images.githubusercontent.com/105741983/240873741-98a15aa2-bb22-46fb-8b4b-59d7a4f538f7.png", "Desktop app")
+    ];
+    var Bloglar = [];
+    var repositories = [];
+    var Teknolojiler = [
+      Teknoloji("HTML", "#e34c26", 90),
+      Teknoloji("CSS", "#264de4", 90),
+      Teknoloji("JavaScript", "#F0DB4F", 85),
+      Teknoloji("Tailwind CSS", "#67e8f9", 70),
+      Teknoloji("Bootstrap", "#563d7c", 95),
+      Teknoloji("Golang", "#00ADD8", 70),
+    ];
+
+    addRoute("", "./components/home.kw", "Anasayfa", ()=>{})
+    addRoute("/blogs", "./components/blog.kw", "Bloglar", ()=>{})
+    addRoute("/github", "./components/github.kw", "Github", ()=>{})
+    addRoute("/blog", "./components/blogcontent.kw", "Blog", ()=> {
+      var BlogPath = params[1];
+      fetch(`https://raw.githubusercontent.com/Hasan-Kilici/hasan-kilici.github.io/main/blog/${BlogPath}`).then(async (data) => {
+        var HTML = await data.text()
+        document.getElementById("content").innerHTML = HTML;
+      })
+    })
+
+    window.onload = async () => {
+      await fetch("https://api.github.com/repos/hasan-kilici/hasan-kilici.github.io/contents/blog").then(async (data) => {
+        let blogs = await data.json();
+        for (let i = 0; i < blogs.length; i++) {
+          let name = blogs[i].name.replace(/-/g, " ").split(".md")[0]
+          Bloglar.push(Blog(name, `#/blog?param=${blogs[i].name}`, "https://retool.com/blog/content/images/2022/02/gotchas-git-github-banner-1.png", "Yazılım", `Sizler için yararlı olabileceğini düşündüğüm içeriklernden birisi.`))
+        }
+      })
+      fetch("https://api.github.com/users/Hasan-Kilici/repos").then(async(data)=>{
+          let repos = await data.json()
+          setTimeout(async()=>{
+          for(let i = 0;i < repos.length;i++){
+            repositories.push(await repos[i].name);
+          }
+      },0)
+    })
+  }
+  </script>
+
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <div class="w-100 flex flex-wrap items-center justify-between p-4">
+      <a href="#" class="flex items-center">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kawethra</span>
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-multi-level" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Anasayfa</a>
+          </li>
+          <li>
+            <a href="#/github"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Github</a>
+          </li>
+          <li>
+            <a href="#/blogs"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="main">
+
+  </div>
+</body>
+
+</html>

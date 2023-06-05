@@ -1,0 +1,23 @@
+<section class="bg-white dark:bg-gray-900 mb-[100px]">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Merhaba ben %=Author%</h1>
+
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">%=Description%</p>
+
+    </div>
+</section>
+
+<div class="container mx-auto px-4">
+  <h3 class="text-3xl font-bold dark:text-white mb-[25px]">Projelerim</h3>
+  <div class="flex flex-wrap gap-4">
+    %foreach Projeler as Proje%
+      Proje
+    %end%
+  </div>
+  <div class="mt-[100px]">
+  <h3 class="text-3xl font-bold dark:text-white mb-[25px]">Kullandığım teknolojiler</h3>
+    %foreach Teknolojiler as Teknoloji%
+      Teknoloji
+    %end%
+  </div>
+</div>
