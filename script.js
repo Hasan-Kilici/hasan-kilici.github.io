@@ -104,7 +104,7 @@ window.addEventListener('hashchange', component);
 
 function Proje(projeAdi,projeAciklamasi,projeLink,projeBanner,projeTipi){
     var HTML = `<div class="sm:w-[100%] md:w-[32.3333%]">
-    <a href="#">
+    <a href="${projeLink}">
         <img class="rounded-lg object-none h-[200px] w-[100%] bg-[#00aed9]" src="${projeBanner}" alt="" />
     </a>
     <div class="pt-5">
@@ -132,7 +132,7 @@ function Teknoloji(dil,renk,yuzde){
 
 function Blog(baslik,link,banner,konu,aciklama){
 var HTML = `<div class="sm:w-[100%] md:w-[32.3333%]">
-    <a href="#">
+    <a href="${link}">
         <img class="rounded-lg object-none h-[200px] w-[100%] bg-[#00aed9]" src="${banner}" alt="" />
     </a>
     <div class="pt-5">
@@ -141,7 +141,7 @@ var HTML = `<div class="sm:w-[100%] md:w-[32.3333%]">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">${baslik}</h5>
         </a>
         <p class="mb-3 h-[100px] font-normal text-gray-400">${aciklama}</p>
-        <button onclick="window.location.href='${link}'" type="button" class="text-gray-300 text-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700 hover:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Projeyi görüntüle</button>
+        <button onclick="window.location.href='${link}'" type="button" class="text-gray-300 text-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700 hover:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Blogu görüntüle</button>
     </div>
 </div>`
 
