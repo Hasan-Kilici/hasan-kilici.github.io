@@ -19,11 +19,11 @@ async function component() {
       } else {
         page = cache[routes[i].path];
       }
-      page = await replaceDefultVariables(page);
-      page = await replaceLoops(page);
-      document.getElementById("main").innerHTML = page;
       document.title = routes[i].title;
-      setTimeout(() => {
+      setTimeout(async() => {
+        page = await replaceDefultVariables(page);
+        page = await replaceLoops(page);
+        document.getElementById("main").innerHTML = page;
         routes[i].func();
         console.log(routes[i].func);
       }, 10);
@@ -108,21 +108,21 @@ function Proje(projeAdi,projeAciklamasi,projeLink,projeBanner,projeTipi){
         <img class="rounded-lg object-none h-[200px] w-[100%] bg-[#00aed9]" src="${projeBanner}" alt="" />
     </a>
     <div class="pt-5">
-<span class="mb-2 bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300"><i class="fa-duotone fa-gear dark:text-pink-300 text-pink-800" style="--fa-secondary-opacity: 1;"></i> ${projeTipi}</span>
+<span class="mb-2 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full bg-pink-900 text-pink-300"><i class="fa-duotone fa-gear text-pink-300" style="--fa-secondary-opacity: 1;"></i> ${projeTipi}</span>
         <a href="${projeLink}">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${projeAdi}</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">${projeAdi}</h5>
         </a>
-        <p class="mb-3 h-[100px] font-normal text-gray-700 dark:text-gray-400">${projeAciklamasi}</p>
-        <button onclick="window.location.href='${projeLink}'" type="button" class="text-gray-700 dark:text-gray-400 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 hover:dark:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Projeyi görüntüle</button>
+        <p class="mb-3 h-[100px] font-normal text-gray-400">${projeAciklamasi}</p>
+        <button onclick="window.location.href='${projeLink}'" type="button" class="text-gray-300 text-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700 hover:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Projeyi görüntüle</button>
     </div>
 </div>`
   return HTML;
 }
 
 function Teknoloji(dil,renk,yuzde){
-  var HTML = `  <label class="mt-4 text-lg font-semibold dark:text-gray-100 text-gray-900">${dil}</label>
-  <div class="w-100 bg-gray-300 dark:bg-gray-950 rounded-full">
-    <div class="w-[${yuzde}%] bg-[${renk}] text-gray-100 rounded-full px-1">
+  var HTML = `  <label class="mt-4 text-lg font-semibold text-gray-100">${dil}</label>
+  <div class="w-100 bg-gray-950 rounded-full">
+    <div class="w-[${yuzde}%] bg-[${renk}] text-gray-100 rounded-full px-2">
       <label class="font-semibold">${yuzde}%</label>
     </div>
   </div>`
@@ -131,23 +131,19 @@ function Teknoloji(dil,renk,yuzde){
 }
 
 function Blog(baslik,link,banner,konu,aciklama){
-  var HTML = `
-  <div class="sm:w-[100%] md:w-[32.3333%]">
-    <a href="${link}">
+var HTML = `<div class="sm:w-[100%] md:w-[32.3333%]">
+    <a href="#">
         <img class="rounded-lg object-none h-[200px] w-[100%] bg-[#00aed9]" src="${banner}" alt="" />
     </a>
     <div class="pt-5">
-<span class="mb-2 bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300"><i class="fa-duotone fa-gear dark:text-pink-300 text-pink-800" style="--fa-secondary-opacity: 1;"></i> ${konu}</span>
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${baslik}</h5>
+<span class="mb-2 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full bg-pink-900 text-pink-300"><i class="fa-duotone fa-gear text-pink-300" style="--fa-secondary-opacity: 1;"></i> ${konu}</span>
+        <a href="${link}">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">${baslik}</h5>
         </a>
-        <p class="mb-3 h-[100px] font-normal text-gray-700 dark:text-gray-400">
-        ${aciklama}
-        </p>
-        <button onclick="window.location.href='${link}'" type="button" class="text-gray-700 dark:text-gray-400 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 hover:dark:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Projeyi görüntüle</button>
+        <p class="mb-3 h-[100px] font-normal text-gray-400">${aciklama}</p>
+        <button onclick="window.location.href='${link}'" type="button" class="text-gray-300 text-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700 hover:text-white hover:text-black"><i class="fa-solid fa-arrow-up-right-from-square"></i> Projeyi görüntüle</button>
     </div>
-</div>
-  `;  
+</div>`
 
   
   return HTML

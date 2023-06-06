@@ -1,11 +1,11 @@
-<div class="grid grid-cols-2 md:grid-cols-3 gap-1 justify-items-center mt-3">
+<div class="flex flex-wrap flex-col md:flex-row gap-[10px]">
 
 %foreach repositories as repo%
- <a href="https://github.com/hasan-kilici/repo" class="w-[95%] bg-slate-900 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200">
+ <a href="https://github.com/hasan-kilici/repo" class="w-100 md:w-[calc(50%-5px)] bg-slate-900 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200">
 
-    <div class="flex flex-row">
-      <img src="https://avatars.githubusercontent.com/u/105741983?v=4" width="40px" class="rounded" />
-      <p class="ml-3">
+    <div class="flex flex-row items-center">
+      <img src="https://avatars.githubusercontent.com/u/105741983?v=4" width="40px" height="40px" class="rounded" />
+      <p class="ml-3 w-[calc(100% - 40px)]">
         <span class="text-gray-500 font-semibold">Hasan-kilici/</span>
         <span class="text-gray-300 font-semibold">repo<span>
       </p>
