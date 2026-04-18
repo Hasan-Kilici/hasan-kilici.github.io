@@ -1,0 +1,58 @@
+[
+  {
+    "name": "full-stack-url-shorter",
+    "link": "https://github.com/hasan-kilici/full-stack-url-shorter",
+    "stack": ["Go", "Fiber", "PostgreSQL"],
+    "type": "Backend / Fullstack",
+    "highlight": "High-performance URL shortening service with REST API and database persistence.",
+    "include": true
+  },
+  {
+    "name": "full-stack-weather-app",
+    "link": "https://github.com/hasan-kilici/full-stack-weather-app",
+    "stack": ["Node.js", "API Integration"],
+    "type": "Fullstack",
+    "highlight": "Weather application consuming external APIs with clean UI and backend logic.",
+    "include": true
+  },
+  {
+    "name": "full-stack-w2g",
+    "link": "https://github.com/hasan-kilici/full-stack-w2g",
+    "stack": ["WebSocket", "Node.js", "Realtime"],
+    "type": "Realtime System",
+    "highlight": "Watch-to-Gether style real-time synchronized video system using WebSockets.",
+    "include": true
+  },
+  {
+    "name": "E-Ticaret-sitesi-v2",
+    "link": "https://github.com/hasan-kilici/e-ticaret-sitesi-v2.0.0",
+    "stack": ["Node.js", "Express", "MongoDB"],
+    "type": "Backend / Fullstack",
+    "highlight": "E-commerce backend system with product, user and order management APIs.",
+    "include": true
+  },
+  {
+    "name": "full-stack-chat-app",
+    "link": "https://github.com/hasan-kilici/full-stack-chat-app",
+    "stack": ["Go", "Fiber", "WebSocket"],
+    "type": "Fullstack",
+    "highlight": "Real-time chat application with WebSocket integration.",
+    "include": true
+  },
+  {
+    "name": "github-clone-v4",
+    "link":"https://github.com/hasan-kilici/github-clone-v4",
+    "stack": ["Node.js", "Express", "MongoDB"],
+    "type": "Backend / Fullstack",
+    "highlight": "GitHub clone backend with user authentication, repository management and issue tracking.",
+    "include": true
+  },
+  {
+    "name": "Online-tas-kagit-makas",
+    "link": "https://github.com/hasan-kilici/online-tas-kagit-makas",
+    "stack": ["Express", "WebSocket", "Node.js"],
+    "type": "Fullstack",
+    "highlight": "Online rock-paper-scissors game with real-time multiplayer functionality.",
+    "include": true
+  }
+]
