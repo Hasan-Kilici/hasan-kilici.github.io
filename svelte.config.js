@@ -8,7 +8,7 @@ const config = {
       fallback: 'index.html'
     }),
     paths: {
-      base: '/hasan-kilici.github.io'
+      base: ''
     }
   }
 };
