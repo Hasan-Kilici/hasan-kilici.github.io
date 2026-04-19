@@ -1,6 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 
-const config = {
+export default {
   kit: {
     adapter: adapter({
       pages: 'build',
@@ -9,8 +9,9 @@ const config = {
     }),
     paths: {
       base: ''
+    },
+    prerender: {
+      entries: ['*']
     }
   }
 };
-
-export default config;

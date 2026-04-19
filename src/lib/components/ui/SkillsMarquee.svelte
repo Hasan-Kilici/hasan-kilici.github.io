@@ -13,6 +13,8 @@
     import php from "$lib/assets/skills/php.png";
     import postgresql from "$lib/assets/skills/postgresql.png";
     import mysql from "$lib/assets/skills/mysql.png";
+    import mongodb from "$lib/assets/skills/mongodb.png";
+    import socketio from "$lib/assets/skills/socketio.png";
 </script>
 <div class="relative overflow-hidden container mx-auto">
 
@@ -40,17 +42,19 @@
         pauseOnHover={true}
         gradient={false}
     >
-        <img src={csharp} alt="C#" class="h-16 mx-4" />
-        <img src={figma} alt="Figma" class="h-16 mx-4" />
-        <img src={golang} alt="Go" class="h-16 mx-4" />
-        <img src={nodejs} alt="Node.js" class="h-16 mx-4" />
-        <img src={python} alt="Python" class="h-16 mx-4" />
-        <img src={svelte} alt="Svelte" class="h-16 mx-4" />
-        <img src={tailwind} alt="Tailwind CSS" class="h-16 mx-4" />
-        <img src={nuxt} alt="Nuxt.js" class="h-16 mx-4" />
-        <img src={php} alt="PHP" class="h-16 mx-4" />
-        <img src={postgresql} alt="PostgreSQL" class="h-16 mx-4" />
-        <img src={mysql} alt="MySQL" class="h-16 mx-4" />
+        <img src={csharp} alt="C#" class="h-16" />
+        <img src={figma} alt="Figma" class="h-16" />
+        <img src={golang} alt="Go" class="h-16" />
+        <img src={nodejs} alt="Node.js" class="h-16" />
+        <img src={python} alt="Python" class="h-16" />
+        <img src={svelte} alt="Svelte" class="h-16" />
+        <img src={tailwind} alt="Tailwind CSS" class="h-16" />
+        <img src={nuxt} alt="Nuxt.js" class="h-16" />
+        <img src={php} alt="PHP" class="h-16" />
+        <img src={postgresql} alt="PostgreSQL" class="h-16" />
+        <img src={mysql} alt="MySQL" class="h-16" />
+        <img src={mongodb} alt="MongoDB" class="h-16" />
+        <img src={socketio} alt="Socket.IO" class="h-16" />
     </Marquee>
 
 </div>

@@ -2,19 +2,16 @@
   import { GithubLogo, LinkedinLogo, InstagramLogo } from "phosphor-svelte";
 </script>
 
-<footer class="border-t border-border bg-muted">
-
+<footer class="border-t border-border bg-background">
   <div class="max-w-6xl mx-auto px-4 py-10">
-
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-
       <!-- LEFT -->
-      <div class="text-sm text-muted-foreground">
+      <div class="text-sm text-foreground/70">
         © {new Date().getFullYear()} Hasan KILICI Tüm hakları saklıdır.
       </div>
 
       <!-- CENTER (optional short nav) -->
-      <div class="flex gap-6 text-sm text-muted-foreground">
+      <div class="flex gap-6 text-sm text-foreground/70">
         <a href="#about" class="hover:text-foreground transition">Hakkımda</a>
         <a href="#projects" class="hover:text-foreground transition">Projeler</a>
         <a href="#timeline" class="hover:text-foreground transition">Eğitim ve Deneyim</a>
@@ -25,24 +22,26 @@
       <div class="flex items-center gap-3">
 
         <a href="https://github.com/hasan-kilici" target="_blank"
-          class="p-2 rounded-lg border border-border hover:bg-accent hover:text-white transition">
-          <GithubLogo size={18} />
+            aria-label="GitHub Profili"
+            title="GitHub Profili"
+            class="p-2 rounded-lg border border-border hover:bg-accent hover:text-white transition">
+            <GithubLogo size={18} />
         </a>
 
         <a href="https://www.linkedin.com/in/hasan-kilici-143b31252/" target="_blank"
+          aria-label="LinkedIn Profili"
+          title="LinkedIn Profili"  
           class="p-2 rounded-lg border border-border hover:bg-accent hover:text-white transition">
           <LinkedinLogo size={18} />
         </a>
 
         <a href="https://instagram.com/kawethra_official" target="_blank"
-          class="p-2 rounded-lg border border-border hover:bg-accent hover:text-white transition">
-          <InstagramLogo size={18} />
+            aria-label="Instagram Profili"
+            title="Instagram Profili"
+            class="p-2 rounded-lg border border-border hover:bg-accent hover:text-white transition">
+            <InstagramLogo size={18} />
         </a>
-
       </div>
-
     </div>
-
   </div>
-
 </footer>
