@@ -1,5 +1,7 @@
 <script>
+  import { page } from "$app/stores";
   import { GithubLogo, LinkedinLogo, InstagramLogo } from "phosphor-svelte";
+  $: isHome = $page.url.pathname === "/";
 </script>
 
 <footer class="border-t border-border bg-background">
@@ -12,10 +14,10 @@
 
       <!-- CENTER (optional short nav) -->
       <div class="flex gap-6 text-sm text-foreground/70">
-        <a href="#about" class="hover:text-foreground transition">Hakkımda</a>
-        <a href="#projects" class="hover:text-foreground transition">Projeler</a>
-        <a href="#timeline" class="hover:text-foreground transition">Eğitim ve Deneyim</a>
-        <a href="#contact" class="hover:text-foreground transition">İletişim</a>
+        <a href={isHome ? "#about" : "/#about"} class="hover:text-foreground transition">Hakkımda</a>
+        <a href={isHome ? "#projects" : "/#projects"} class="hover:text-foreground transition">Projeler</a>
+        <a href={isHome ? "#timeline" : "/#timeline"} class="hover:text-foreground transition">Eğitim ve Deneyim</a>
+        <a href={isHome ? "#contact" : "/#contact"} class="hover:text-foreground transition">İletişim</a>
       </div>
 
       <!-- RIGHT SOCIALS -->

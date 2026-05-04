@@ -1,58 +1,72 @@
 [
   {
-    "name": "full-stack-url-shorter",
+    "id":0,
+    "name": "URL Kısaltma Servisi",
     "link": "https://github.com/hasan-kilici/full-stack-url-shorter",
     "stack": ["Go", "Fiber", "PostgreSQL"],
     "type": "Backend / Fullstack",
-    "highlight": "High-performance URL shortening service with REST API and database persistence.",
+    "highlight": "REST API ve veritabanı kalıcılığı ile yüksek performanslı URL kısaltma servisi.",
+    "content": "## Genel Bakış\nGo ve Fiber kullanılarak geliştirilmiş, ölçeklenebilir ve yüksek performanslı bir URL kısaltma servisidir.\n\n## Özellikler\n- REST API mimarisi\n- PostgreSQL ile kalıcı veri saklama\n- Benzersiz kısa URL üretimi\n- Yönlendirme optimizasyonu\n\n## Teknik Detaylar\nSistem Go'nun concurrency yapısı ve Fiber framework'ünün hafifliği üzerine kurulmuştur. Veritabanı işlemleri yüksek performans için optimize edilmiştir.",
+    "images": [
+      "/images/url-shortener/1.png",
+      "/images/url-shortener/2.png"
+    ],
     "include": true
   },
   {
-    "name": "full-stack-weather-app",
+    "id":1,
+    "name": "Hava Durumu Uygulaması",
     "link": "https://github.com/hasan-kilici/full-stack-weather-app",
-    "stack": ["Node.js", "API Integration"],
+    "stack": ["Node.js", "API Entegrasyonu"],
     "type": "Fullstack",
-    "highlight": "Weather application consuming external APIs with clean UI and backend logic.",
+    "highlight": "Dış API’lerden veri çeken, temiz arayüze sahip hava durumu uygulaması.",
+    "content": "## Genel Bakış\nHarici hava durumu API’lerini kullanarak gerçek zamanlı veri sağlayan full-stack bir uygulamadır.\n\n## Özellikler\n- Gerçek zamanlı hava durumu verisi\n- Harici API entegrasyonu\n- Basit ve sade kullanıcı arayüzü\n\n## Teknik Detaylar\nUygulama, dış REST API’lerinden veri çekip backend üzerinde işleyerek kullanıcıya sunar.",
+    "images": [
+      "/images/weather-app/1.png"
+    ],
     "include": true
   },
   {
-    "name": "full-stack-w2g",
+    "id":2,
+    "name": "Watch Together Platformu",
     "link": "https://github.com/hasan-kilici/full-stack-w2g",
     "stack": ["WebSocket", "Node.js", "Realtime"],
     "type": "Realtime System",
-    "highlight": "Watch-to-Gether style real-time synchronized video system using WebSockets.",
+    "highlight": "WebSocket tabanlı gerçek zamanlı senkron video izleme sistemi.",
+    "content": "## Genel Bakış\nBirden fazla kullanıcının aynı anda senkronize şekilde video izleyebildiği gerçek zamanlı platform.\n\n## Özellikler\n- WebSocket ile gerçek zamanlı senkronizasyon\n- Çoklu kullanıcı odaları\n- Ortak video kontrolü\n\n## Teknik Detaylar\nWebSocket yapısı sayesinde tüm kullanıcılar arasında düşük gecikmeli senkronizasyon sağlanır.",
+    "images": [
+      "/images/w2g/1.png",
+      "/images/w2g/2.png",
+      "/images/w2g/3.png"
+    ],
     "include": true
   },
   {
-    "name": "E-Ticaret-sitesi-v2",
+    "id":3,
+    "name": "E-Ticaret Backend Sistemi",
     "link": "https://github.com/hasan-kilici/e-ticaret-sitesi-v2.0.0",
     "stack": ["Node.js", "Express", "MongoDB"],
     "type": "Backend / Fullstack",
-    "highlight": "E-commerce backend system with product, user and order management APIs.",
+    "highlight": "Ürün, kullanıcı ve sipariş yönetimi için e-ticaret backend sistemi.",
+    "content": "## Genel Bakış\nE-ticaret uygulamaları için geliştirilmiş ölçeklenebilir backend sistemidir.\n\n## Özellikler\n- Ürün ve stok yönetimi\n- Kullanıcı kimlik doğrulama ve yetkilendirme\n- Sipariş yönetim sistemi\n\n## Teknik Detaylar\nExpress ve MongoDB kullanılarak modüler bir yapı oluşturulmuştur.",
+    "images": [
+      "/images/ecommerce/1.png",
+      "/images/ecommerce/2.png",
+      "/images/ecommerce/3.png"
+    ],
     "include": true
   },
   {
-    "name": "full-stack-chat-app",
+    "id":4,
+    "name": "Gerçek Zamanlı Chat Uygulaması",
     "link": "https://github.com/hasan-kilici/full-stack-chat-app",
     "stack": ["Go", "Fiber", "WebSocket"],
     "type": "Fullstack",
-    "highlight": "Real-time chat application with WebSocket integration.",
-    "include": true
-  },
-  {
-    "name": "github-clone-v4",
-    "link":"https://github.com/hasan-kilici/github-clone-v4",
-    "stack": ["Node.js", "Express", "MongoDB"],
-    "type": "Backend / Fullstack",
-    "highlight": "GitHub clone backend with user authentication, repository management and issue tracking.",
-    "include": true
-  },
-  {
-    "name": "Online-tas-kagit-makas",
-    "link": "https://github.com/hasan-kilici/online-tas-kagit-makas",
-    "stack": ["Express", "WebSocket", "Node.js"],
-    "type": "Fullstack",
-    "highlight": "Online rock-paper-scissors game with real-time multiplayer functionality.",
+    "highlight": "WebSocket entegrasyonu ile gerçek zamanlı chat uygulaması.",
+    "content": "## Genel Bakış\nGerçek zamanlı iletişim için geliştirilmiş hızlı ve ölçeklenebilir chat uygulaması.\n\n## Özellikler\n- WebSocket tabanlı mesajlaşma\n- Çoklu sohbet odaları\n- Düşük gecikmeli iletişim\n\n## Teknik Detaylar\nGo ve Fiber kullanılarak yüksek performanslı bir backend yapısı oluşturulmuştur.",
+    "images": [
+      "/images/chat-app/1.png"
+    ],
     "include": true
   }
 ]
