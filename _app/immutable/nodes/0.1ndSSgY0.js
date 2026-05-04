@@ -1,1 +1,0 @@
-import{C as e,P as t,T as n,_ as r,h as i,u as a,w as o,z as s}from"../chunks/CadMB8N-.js";import"../chunks/DEDqjojZ.js";var c=``+new URL(`../assets/favicon.BsFpJfAA.svg`,import.meta.url).href,l=n(`<link rel="icon"/>`);function u(n,u){var d=o();i(`12qhfyh`,n=>{var r=l();t(()=>a(r,`href`,c)),e(n,r)}),r(s(d),()=>u.children),e(n,d)}export{u as component};
